@@ -89,7 +89,7 @@ dic={}
 for j in range(0,len(lis),2):
     dic[lis[j]]=lis[j+1]
 #print (dic)
-conn = cx_Oracle.connect('ldreport/XXXX@172.16.X.XXX:1521/reportdb')
+conn = cx_Oracle.connect('usrname/pwd@ip:1521/dbname')
 c = conn.cursor()
 for k,v in dic.items():
     sql = "insert into ldreport.dw_weather(city,weather) values(\'%s\',\'%s\')" % (k, v)
