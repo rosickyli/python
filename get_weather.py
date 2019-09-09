@@ -71,7 +71,7 @@ while (i<len(citys)):
         weather = pat_weather.findall(content)
         #print(weather[0])
         td = datetime.datetime.now().strftime('%Y-%m-%d')
-        z=td+' '+weather[0]
+        z = td+' '+weather[0]
         #print(z)
         lis.append(z)
     except urllib.request.URLError as e:
