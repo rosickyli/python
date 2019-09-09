@@ -96,8 +96,7 @@ df2 = df1.rename(columns={'index': 'city'})
 df3 = pd.merge(df2['city'],(df2['values'].str.split(' ', 1).str[0]), how='left',left_index=True,right_index=True)
 df4 = pd.merge(df3,(df2['values'].str.split(' ', 1).str[1]), how='left',left_index=True,right_index=True)
 df5 = df4.rename(columns={'values_x':'sdate','values_y':'weather'})
-#df3 = df2['citys'], df2['sdate'], df2['weather'] = df2['values'].str.split(' ', 1).strd
-#print (df6)
+#print(df5)
 conn = 'oracle+cx_oracle://usrname:pwd@ip:1521/dbname'
 engine = create_engine(conn,echo=False)
 df5.to_sql('weather',con=conn,if_exists='append',index_label='sid')
