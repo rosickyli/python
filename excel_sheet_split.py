@@ -1,4 +1,4 @@
-#  Split one excel file multiple sheets into several excel files
+#  Split one excel file with multiple sheets into several excel files
 from openpyxl import load_workbook,Workbook
 
 
